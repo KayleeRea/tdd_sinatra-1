@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>Fantastic Food</title>
+  <% DASFOOD.each_with_index do |item, index| %>
+  <h1><%= item %></h1>
+    <% end %>
 </head>
 <body>
-<h1><a href="/items">Menu Items</a></h1>
-Please take a look at our Menu!
 </body>
 </html>

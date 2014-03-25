@@ -25,7 +25,6 @@ class App < Sinatra::Base
   end
 
   get '/items/:id' do
-    @id = params[@id].to_i
-    erb :items
+    erb :item_info
   end
 end

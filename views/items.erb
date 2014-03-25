@@ -5,9 +5,7 @@
 </head>
 <body>
 <a href="/items/new">New Item</a>
-
 <% DASFOOD.each_with_index do |item, index| %>
-
   <ul>
     <%= item %> - <a href="/items/<%= index %>">Show Item</a>
   </ul>

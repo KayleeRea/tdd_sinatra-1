@@ -13,5 +13,8 @@ feature 'user can manage items' do
     click_on("Submit")
     expect(page).to have_content("Sag Paneer")
     click_link("Show Item")
+    within ("h1") do
+    expect(page).to have_content("Sag Paneer")
+    end
   end
 end
