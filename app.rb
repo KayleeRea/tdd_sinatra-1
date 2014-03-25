@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/base'
 
 
-class App < Sinatra::Base
+class App < Sinatra::Application
 
   DASFOOD = []
 
@@ -27,4 +27,16 @@ class App < Sinatra::Base
   get '/items/:id' do
     erb :item_info
   end
+
+  get '/items/:id/edit' do
+    erb :edit_item
+  end
+
+  put '/items/:id' do
+    @id = params[:id].to_i
+    @add_name = params[:edit_item]
+    DASFOOD[@id] = @add_name
+    redirect '/items'
+  end
+
 end

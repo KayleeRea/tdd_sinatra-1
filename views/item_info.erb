@@ -3,9 +3,10 @@
 <head>
   <title>Fantastic Food</title>
   <% DASFOOD.each_with_index do |item, index| %>
-  <h1><%= item %></h1>
-    <% end %>
-</head>
-<body>
-</body>
-</html>
+    <h1><%= item %></h1>
+    </head>
+    <body>
+    <a href="/items/<%= index %>/edit">Edit Item</a>
+  <% end %>
+  </body>
+  </html>
