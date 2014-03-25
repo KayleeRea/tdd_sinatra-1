@@ -12,10 +12,6 @@ feature 'user can manage items' do
     fill_in "new_item", with: "Sag Paneer"
     click_on("Submit")
     expect(page).to have_content("Sag Paneer")
-  end
-
-  scenario 'user can see item in item page' do
-    visit '/items'
-    expect(page).to have_content("Sag Paneer")
+    click_link("Show Item")
   end
 end

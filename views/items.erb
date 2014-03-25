@@ -6,16 +6,11 @@
 <body>
 <a href="/items/new">New Item</a>
 
-<% DASFOOD.each do |item| %>
+<% DASFOOD.each_with_index do |item, index| %>
 
   <ul>
-    <%= item %>
-
+    <%= item %> - <a href="/items/<%= index %>">Show Item</a>
   </ul>
-
 <% end %>
-
 </body>
-
 </html>
-
