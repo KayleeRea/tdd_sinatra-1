@@ -1,4 +1,6 @@
+require 'sinatra'
 require 'sinatra/base'
+
 
 class App < Sinatra::Base
 
@@ -8,14 +10,22 @@ class App < Sinatra::Base
     erb :index
   end
 
-  get '/new-item' do
-    erb :new_items
+  get '/items' do
+    erb :items
+
   end
 
-  post '/' do
+  get '/items/new' do
+    erb :new
+  end
+
+  post '/items' do
     DASFOOD << params[:new_item]
-    redirect '/'
+    erb :items
+  end
+
+  get '/items/:id' do
+    @id = params[@id].to_i
+    erb :items
   end
 end
-
-
