@@ -7,7 +7,9 @@ Capybara.app = App
 feature 'user can manage items' do
   scenario 'user can add an item' do
     visit '/'
-    expect(page).to have_content("Channa Masala")
+    expect(page).to have_link("New Item")
+
+
 
   end
 end
