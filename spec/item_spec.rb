@@ -7,9 +7,10 @@ Capybara.app = App
 feature 'user can manage items' do
   scenario 'user can add an item' do
     visit '/'
-    expect(page).to have_link("New Item")
-
-
-
+    expect(page).to have_content("New Item")
+    click_link("New Item")
+    fill_in "new_item", with: "Sag Paneer"
+    click_on("Submit")
+    expect(page).to have_content("Sag Paneer")
   end
 end

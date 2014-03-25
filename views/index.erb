@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Fantasic Food</title>
-  <body>
-    <a href="/test/new">New Item</a>
-  </body>
+  <title>Fantasic Food</title>
 </head>
+<body>
+<a href="/new-item">New Item</a>
+
+<% DASFOOD.each do |item| %>
+  <ul>
+    <%= item %>
+  </ul>
+<% end %>
+</body>
+
 </html>
